@@ -1,19 +1,23 @@
 !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
 <script>
+    alert('Test');
 if (annyang) {
-  // Let's define a command.
-  var commands = {
-    'hello': function() { alert('Hello world!'); }
-  };
-
   // Add our commands to annyang
-  annyang.addCommands(commands);
+  annyang.addCommands({
+    'hello': function() { alert('Hello world!'); }
+  });
 
-  // Start listening.
-  annyang.start();
+  // Tell KITT to use annyang
+  SpeechKITT.annyang();
+
+  // Define a stylesheet for KITT to use
+  SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/themes/flat.css');
+
+  // Render KITT's interface
+  SpeechKITT.vroom();
 }
-  alert('Test');
 </script>
 </html>
