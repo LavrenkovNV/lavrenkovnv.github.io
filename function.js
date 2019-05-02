@@ -65,3 +65,36 @@ function openGame() {
     nyanCat.style.display = "none";
   }
 }
+
+if (annyang) {
+  var commands = {
+    'hello cat': function() {
+      showAnswerOne();
+      console.log("This works"); //Just for checking
+    },
+
+    'meow': function() {
+      showAnswerTwo();
+      console.log("This works"); //Just for checking
+    },
+  }
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start({
+    autoRestart: true
+  });
+
+// Tell KITT to use annyang
+  SpeechKITT.annyang();
+
+  // Define a stylesheet for KITT to use
+  SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/themes/flat.css');
+
+  // Render KITT's interface
+  SpeechKITT.vroom();
+
+
+}
