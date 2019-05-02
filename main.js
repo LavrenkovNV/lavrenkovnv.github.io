@@ -2,43 +2,31 @@
 
 //Copyright (c) 2016 Tal Ater ??
 
-//defining functions for PRINTING TEXT TO A DIV AND MAKING DIV APPEAR on voice command via DOM
-//function for PRINTING TEXT OUTPUT TO DIV
-function showAnswerOne(){
-  document.getElementById('speech-bubble1').innerHTML = "Hello Human!";
-  document.getElementById('speech-bubble1:after'); // adds triangle to speech bubble
-  var bubbleOne = document.getElementById("speech-bubble1");
-  if (bubbleOne.style.display === "none") {
-    bubbleOne.style.display = "block";
-  } else {
-    bubbleOne.style.display = "none";
-  }
-};
+//defining functions for PLAYING AND PAUSING A VIDEO on voice command via DOM
 
-//function for PRINTING TEXT OUTPUT TO DIV
-function showAnswerTwo(){
-  document.getElementById('speech-bubble2').innerHTML = "Meow LOL... Go to example 2!";
-  document.getElementById('speech-bubble2:after'); // adds triangle to speech bubble
-  var bubbleTwo = document.getElementById("speech-bubble2");
-  if (bubbleTwo.style.display === "none") {
-    bubbleTwo.style.display = "block";
-  } else {
-    bubbleTwo.style.display = "none";
-  }
-};
+var video = document.getElementById("vid");
 
+//function for PLAYING A VIDEO
+function Play() {
+  video.play();
+}
+
+//function for PAUSING A VIDEO
+function Pause() {
+  video.pause();
+}
+//setting commands for the annyang library to identify words and then call the function that were defined above
 if (annyang) {
   var commands = {
-    'hi': function() {
-      showAnswerOne();
-      console.log("This works"); //Just for checking
+    "play video": function() {
+      vid.play();
+      console.log("this works"); //just for testing
     },
-
-    'bye': function() {
-      showAnswerTwo();
-      console.log("This works"); //Just for checking
-    },
-  }
+    "pause video": function() {
+      vid.pause();
+      console.log("this pauses"); //just for testing
+    }
+  };
 
   // Add our commands to annyang
   annyang.addCommands(commands);
@@ -47,5 +35,4 @@ if (annyang) {
   annyang.start({
     autoRestart: true
   });
-
 }
