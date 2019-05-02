@@ -1,40 +1,49 @@
 <html>
+
 <head>
+    <script src="/js/annyang.min.js"></script>
+    <script src="/js/speechkitt.min.js"></script>
+    <script src="js/index.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <meta charset="UTF-8">
     <title>Проект Пандора</title>
-    <style>
-        body {
-            margin: 0 0;
-            padding: 0 0;
-        }
-        img#sample_site {
-            width: 100%;
-        }
-    </style>
 </head>
-    <script src="js/index.js"></script>
-
 
   <body id="body"> 
     <canvas id="canvas"></canvas>
-    <div class="container">
-        <div class="right">
-            <div class="chat" data-chat="person2">
-            </div>
-            <div  id="writer" class="write">
-                <input type="search" id="textbox">
-            </div>
-            <div  id="btn_stop" class="btn">
-                <input type="button" id="button_stop">
-                    <script src="js/buttonstop.js"></script>
-            </div>
-        </div>
-    </div>
-<script src="/js/annyang.min.js"></script>
-<script src="/js/speechkitt.min.js"></script>
-<script>
+      <script>
+
+if (annyang) {
+                    var commands = {};
+                    commands["Витя"+ " *tag"] = log_speech;
+                    commands["клиника"+ " *tag"] = log_speech;
+                    commands["Clinique"+ " *tag"] = log_speech;
+                    commands["викка"+ " *tag"] = log_speech;
+                    commands["века"+ " *tag"] = log_speech;
+                    commands["Vika"+ " *tag"] = log_speech;
+                    commands["wika"+ " *tag"] = log_speech;
+                    commands["VIKO"+ " *tag"] = log_speech;
+                    commands["Eureka"+ " *tag"] = log_speech;
+                    commands["Erica"+ " *tag"] = log_speech;
+                    commands["Topeka"+ " *tag"] = log_speech;
+                    commands["река"+ " *tag"] = log_speech;
+                    commands["рейка"+ " *tag"] = log_speech;
+                    commands["Drake"+ " *tag"] = log_speech;
+                    commands["Рико"+ " *tag"] = log_speech;
+                    commands[name + " *tag"] = log_speech;
+                    console.log('Установленное имя: ',name);
+                    commands["(слушай) " + name + " *tag"] = log_speech;
+                    commands["(hey) " + name + " *tag"] = log_speech;
+                    commands["(okay) " + name + " *tag"] = log_speech;
+                    commands[name] = observe_speech;
+                    annyang.addCommands(commands);
+                    SpeechKITT.setInstructionsText('Скажите "' + name + '"' );
+                    //SpeechKITT.setSampleCommands(["Сколько времени ?","Помоги мне "]);
+                }
+            });
+
+        
 if (annyang) {
   // Add our commands to annyang
   annyang.addCommands({
@@ -50,6 +59,27 @@ if (annyang) {
   // Render KITT's interface
   SpeechKITT.vroom();
 }
+  annyang.addCallback('resultMatch', function(userSaid, commandText, phrases) {
+            console.log('Сказал:',userSaid); //пример: 'hello'
+            console.log('Текст команды: ',commandText); // 'hello (there)'
+            console.log('Это может быть любой из следующих: ',phrases); // ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+        });
+        //отбить в консоль если не поняла
+        annyang.addCallback('resultNoMatch', function(phrases) {
+            console.log("Вы пытались сказать: ", phrases[0]);
+            console.log("Но опять же, это может быть любой из следующих: ", phrases);
+        });
+
+
+        annyang.addCallback('soundstart', function() {
+            console.log('услышан звук');
+        });
+
+        annyang.addCallback('result', function() {
+            console.log('звук прекратился');
+        });
+
 </script>
-</body>
+  </body>
+
 </html>
