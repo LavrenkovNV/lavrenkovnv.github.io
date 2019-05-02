@@ -29,12 +29,12 @@ function showAnswerTwo(){
 
 if (annyang) {
   var commands = {
-    'hello cat': function() {
+    'привет': function() {
       showAnswerOne();
       console.log("This works"); //Just for checking
     },
 
-    'meow': function() {
+    'пока': function() {
       showAnswerTwo();
       console.log("This works"); //Just for checking
     },
