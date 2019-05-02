@@ -14,22 +14,7 @@
         }
     </style>
 </head>
-<script type="text/javascript">
-  $('.chat[data-chat=person2]').addClass('active-chat')
-$('.person[data-chat=person2]').addClass('active')
-$('.left .person').mousedown(function () {
-    if ($(this).hasClass('.active')) {
-        return false
-    }
-    const findChat = $(this).attr('data-chat')
-    const personName = $(this).find('.name').text()
-    $('.right .top .name').html(personName)
-    $('.chat').removeClass('active-chat')
-    $('.left .person').removeClass('active')
-    $(this).addClass('active')
-    $('.chat[data-chat = ' + findChat + ']').addClass('active-chat')
-})
-</script>
+    <script src="js/index.js"></script>
 
 
   <body id="body"> 
@@ -60,7 +45,7 @@ if (annyang) {
   SpeechKITT.annyang();
 
   // Define a stylesheet for KITT to use
-  SpeechKITT.setStylesheet('/css/app.css');
+  SpeechKITT.setStylesheet('/themes/flat.css');
 
   // Render KITT's interface
   SpeechKITT.vroom();
