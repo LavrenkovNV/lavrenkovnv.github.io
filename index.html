@@ -38,7 +38,7 @@
 if (annyang) {
   // Add our commands to annyang
   annyang.addCommands({
-    'привет': push_silent_response("привет")
+    'привет': function() { alert('Hello world!');display_response('Hello world!'); }
   });
 
   // Tell KITT to use annyang
