@@ -1,5 +1,7 @@
 <html>
 <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <meta charset="UTF-8">
     <title>Проект Пандора</title>
     <style>
@@ -12,8 +14,39 @@
         }
     </style>
 </head>
-<body>
+<script type="text/javascript">
+  $('.chat[data-chat=person2]').addClass('active-chat')
+$('.person[data-chat=person2]').addClass('active')
+$('.left .person').mousedown(function () {
+    if ($(this).hasClass('.active')) {
+        return false
+    }
+    const findChat = $(this).attr('data-chat')
+    const personName = $(this).find('.name').text()
+    $('.right .top .name').html(personName)
+    $('.chat').removeClass('active-chat')
+    $('.left .person').removeClass('active')
+    $(this).addClass('active')
+    $('.chat[data-chat = ' + findChat + ']').addClass('active-chat')
+})
+</script>
 
+
+  <body id="body"> 
+    <canvas id="canvas"></canvas>
+    <div class="container">
+        <div class="right">
+            <div class="chat" data-chat="person2">
+            </div>
+            <div  id="writer" class="write">
+                <input type="search" id="textbox">
+            </div>
+            <div  id="btn_stop" class="btn">
+                <input type="button" id="button_stop">
+                    <script src="js/buttonstop.js"></script>
+            </div>
+        </div>
+    </div>
 <script src="/js/annyang.min.js"></script>
 <script src="/js/speechkitt.min.js"></script>
 <script>
