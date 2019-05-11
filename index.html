@@ -125,4 +125,25 @@ var convo = {
 // pass JSON to your function and you're done!
 chatWindow.talk(convo)
 </script>
+
+<script src="/scripts/annyang.min.js"></script>
+<script src="/scripts/speechkitt.min.js"></script>
+<script>
+if (annyang) {
+  // Add our commands to annyang
+  annyang.addCommands({
+    'hello': function() { alert('Hello world!'); }
+  });
+
+  // Tell KITT to use annyang
+  SpeechKITT.annyang();
+
+  // Define a stylesheet for KITT to use
+  SpeechKITT.setStylesheet('/css/flat.css');
+
+  // Render KITT's interface
+  SpeechKITT.vroom();
+}
+</script>
 </body>
+</html>
