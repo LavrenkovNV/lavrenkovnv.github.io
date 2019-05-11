@@ -37,7 +37,18 @@
 <!-- import the JavaScript file -->
 <script src="../Bubbles.js"></script>
 <script>
-// initialize by constructing a named function...
+
+</script>
+
+<script src="/scripts/annyang.min.js"></script>
+<script src="/scripts/speechkitt.min.js"></script>
+<script>
+if (annyang) {
+  // Add our commands to annyang
+  annyang.addCommands({
+    'hello': function() {
+     
+     // initialize by constructing a named function...
 // ...and add text processing plugin:
 var chatWindow = new Bubbles(document.getElementById("chat"), "chatWindow", {
   // the one that we care about is inputCallbackFn()
@@ -123,18 +134,7 @@ var convo = {
 }
 
 // pass JSON to your function and you're done!
-
-</script>
-
-<script src="/scripts/annyang.min.js"></script>
-<script src="/scripts/speechkitt.min.js"></script>
-<script>
-if (annyang) {
-  // Add our commands to annyang
-  annyang.addCommands({
-    'hello': function() {
-     //alert('Hello world!'); 
-    chatWindow.talk(convo)
+chatWindow.talk(convo)
    }
   });
 
