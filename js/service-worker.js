@@ -34,9 +34,9 @@ self.addEventListener('install', function(event) {
                        .then(assets => {
                        // Открываем и кэшируем нужные страницы и файлы
                            const urlsToCache = [
-/*                               '/app/',
-                ........
-                               '/static/core/logo.svg*',*/
+                             '/js/',
+                             '/manifest/',    
+                              '/icons/1.png*',*
                            ]
                            cache.addAll(urlsToCache)
                            console.log('cached');
