@@ -43,7 +43,7 @@
    }
  ],
 
- "start_url": "/index.html",
+ "start_url": "./manifest/manifest.json",
  "background_color": "#7ACCE5",
  "theme_color": "#7ACCE5",
  "orientation": "any",
