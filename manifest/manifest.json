@@ -43,7 +43,7 @@
    }
  ],
 
- "start_url": "/",
+ "start_url": "/js/",
  "background_color": "#7ACCE5",
  "theme_color": "#7ACCE5",
  "orientation": "any",
