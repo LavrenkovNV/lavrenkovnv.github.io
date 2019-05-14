@@ -1,8 +1,14 @@
+<!DOCTYPE HTML>
 <html>
- <head>
-  <title>Тестируем PHP</title>
- </head>
- <body>
- <?php echo '<p>Привет, мир!</p>'; ?>
- </body>
-</html>
+<head>
+    <title>PHP Hello World Application</title>
+</head>
+<body>
+
+<?php
+// Simple greeting message
+echo "Hello, world!";
+?>
+
+</body>
+</html>                  
