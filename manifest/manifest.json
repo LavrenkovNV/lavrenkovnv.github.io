@@ -44,8 +44,8 @@
  ],
 
  "start_url": "https://lavrenkovnv.github.io/index.html",
- "background_color": "#7ACCE5",
- "theme_color": "#7ACCE5",
+ "background_color": "#f3e9d3",
+ "theme_color": "#f3e9d3",
  "orientation": "any",
  "display": "standalone"
 }
