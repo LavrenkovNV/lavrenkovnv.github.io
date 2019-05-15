@@ -38,6 +38,16 @@ self.addEventListener('install', function(event) {
                              '/index.html',
                              '/manifest/manifest.json',    
                               '/icons/1.png',
+                              '/icons/1.svg',
+                              '/images/1.svg',
+                              '/images/1 (2).svg',
+                              '/images/1 (3).svg',
+                              '/images/1 (4).svg',
+                              '/images/1 (5).svg',
+                              '/images/1 (6).svg',
+                              '/images/1 (7).svg',
+                              '/images/1 (8).svg',
+                              '/images/1 (9).svg',
                            ]
                            cache.addAll(urlsToCache)
                            console.log('cached');
