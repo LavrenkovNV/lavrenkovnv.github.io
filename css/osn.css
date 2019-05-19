@@ -1,19 +1,20 @@
 html{
-	background: #f3e9d3;
-	background-image: url(https://lavrenkovnv.github.io/icons/1.svg);
-	background-repeat: no-repeat;
+    background: #8593ff;
+	background-image: url(https://lavrenkovnv.github.io/images/2.svg);
+    background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: bottom;
     background-size: 40%;
     font-family: 'Didact Gothic', sans-serif;
+    font-size: 1rem;
 }
 #chat{
 	position: relative;
 }
 #me {
     background: #ffffff;
-    font-size: 0.905rem;
-    color: #333;
+    font-size: 1.4rem;
+    color: #ffffff;
     display: inline-block;
     padding: 10px 15px 8px;
     border-radius: 20px;
@@ -33,8 +34,8 @@ html{
 	background: #ffffff;
     background-image: linear-gradient(138deg,#3a2f71f5, #007ec5);
     border-top-left-radius: 0;
-    font-size: 0.905rem;
-    color: #333;
+    font-size: 1.4rem;
+    color: #ffffff;
     display: inline-block;
     padding: 10px 15px 8px;
     border-radius: 20px;
