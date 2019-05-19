@@ -5,6 +5,7 @@ html{
 	background-attachment: fixed;
 	background-position: bottom;
     background-size: 40%;
+    font-family: 'Didact Gothic', sans-serif;
 }
 #chat{
 	position: relative;
