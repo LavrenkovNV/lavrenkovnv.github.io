@@ -1,0 +1,49 @@
+html{
+	background: #f3e9d3;
+	background-image: url(https://lavrenkovnv.github.io/icons/1.svg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;
+}
+chat{
+	position: relative;
+}
+123 {
+    background: #ff9b9b;
+    font-size: 0.905rem;
+    color: #333;
+    display: inline-block;
+    padding: 10px 15px 8px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    float: left;
+    clear: both;
+    max-width: 65%;
+    word-wrap: break-word;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-left: 1%;
+    border-top-left-radius: 0;
+    background-image: linear-gradient(394deg,#f31e4b96, #ff6042);
+    box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.34);
+}
+555{
+	 background: #ff9b9b;
+    background-image: linear-gradient(394deg,#208a5d, #bff504);
+    border-top-left-radius: 0;
+    font-size: 0.905rem;
+    color: #333;
+    display: inline-block;
+    padding: 10px 15px 8px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    float: right;
+    clear: both;
+    max-width: 65%;
+    word-wrap: break-word;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-left: 1%;
+    border-top-right-radius: 0;
+    box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.34);
+}
