@@ -47,7 +47,7 @@ self.addEventListener('install', function(event) {
                               '/images/1 (6).svg',
                               '/images/1 (7).svg',
                               '/images/1 (8).svg',
-                              '/images/1 (9).svg',
+                              '/images/9.svg',
                               '/css/osn.css'
                            ]
                            cache.addAll(urlsToCache)
