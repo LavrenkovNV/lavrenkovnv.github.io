@@ -19,27 +19,7 @@
    /*height: 77vw;*/
 ">
 
-   <div id="root"></div>
-  
-   <script>
-       if ('serviceWorker' in navigator) {
-           window.addEventListener('load', function() {
-               navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                   // Registration was successful
-               console.log('ServiceWorker registration successful with scope: ', registration.scope);
-             }, function(err) {
-               // registration failed :(
-               console.log('ServiceWorker registration failed: ', err);
-             }).catch(function(err) {
-               console.log(err)
-             });
-           });
-         } else {
-           console.log('service worker is not supported');
-         }
-   </script>
-
-
+<div id="root"></div>
     <div id="chat" style="">
     <div class="123" style="">Самообучающийся чат-бот запоминает каждую вашу сказанную фразу, изучает их, а затем выдаёт их за свои при общении с кем-либо в Интернете.</div>
     <div class="555" style="">Ок.</div>
@@ -64,6 +44,24 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+</script>
+
+<script>
+       if ('serviceWorker' in navigator) {
+           window.addEventListener('load', function() {
+               navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                   // Registration was successful
+               console.log('ServiceWorker registration successful with scope: ', registration.scope);
+             }, function(err) {
+               // registration failed :(
+               console.log('ServiceWorker registration failed: ', err);
+             }).catch(function(err) {
+               console.log(err)
+             });
+           });
+         } else {
+           console.log('service worker is not supported');
+         }
 </script>
 
 </body>
